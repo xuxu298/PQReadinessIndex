@@ -13,10 +13,10 @@
 **[Global PQ Readiness Index — April 2026](./report_2026-04-23.md)**
 
 - 350 hosts across 8 sectors and 28 region tags
-- **42.6% negotiate `X25519MLKEM768`** (post-quantum hybrid key-agreement)
-- Bigtech SaaS (65%) and CDN/cloud (61%) lead; banking trails at 22%
-- 0 of 11 large US retail banks negotiated PQ; HSBC HK/UK, DBS, OCBC, Standard Chartered, ANZ, Westpac, Hang Seng, Santander.com all did
-- Same brand, different stacks, different answers (`hsbc.co.uk` PQ vs `hsbc.com` classical)
+- **42.6% negotiated `X25519MLKEM768`** (post-quantum hybrid key-agreement) at the time of measurement
+- Bigtech SaaS (65%) and CDN/cloud (61%) furthest along; banking is at 22%, the lowest of the eight sectors
+- Of 11 large US retail bank domains probed, none negotiated PQ on probe day; many large Asian and corporate banking sites are PQ-ready (HSBC HK/UK, DBS, OCBC, Standard Chartered, ANZ, Westpac, Hang Seng, Santander.com all did)
+- Same brand, different stacks, different answers (`hsbc.co.uk` PQ vs `hsbc.com` classical) — PQ enablement happens at the edge, per-domain, not at the brand level
 
 ![PQ-readiness by sector](./chart_by_sector.png)
 
@@ -33,9 +33,11 @@ Active TLS 1.3 ClientHello probes, two-stage to handle servers that support MLKE
 ## What this is *not*
 
 - Not a vendor benchmark. Targets are not customers, prospects, or competitors of the author.
-- Not a security finding. A "classical-only" status means the server has not yet enabled hybrid PQ key agreement; it does not mean the server is vulnerable today.
+- Not a name-and-shame. A "classical-only" status means the server had not yet enabled hybrid PQ key agreement on probe day. It does not mean the server is vulnerable today, and it does not capture vendor pipelines, internal change-control progress, compliance-cycle constraints, or PQ work happening on non-public surfaces.
 - Not an exhaustive sample. 350 hosts is a representative bottom-line measurement, not a census.
 - Not a Vietnam-targeting report. **No `.vn` hosts are probed.** Vietnamese banks, government, and critical infrastructure are deliberately out of scope.
+
+If your organisation appears here as classical and the picture has since changed, please open an issue — the next index will reflect it.
 
 ---
 
