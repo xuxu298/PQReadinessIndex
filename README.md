@@ -35,6 +35,7 @@ Active TLS 1.3 ClientHello probes, two-stage to handle servers that support MLKE
 
 - Not a vendor benchmark. Targets are not customers, prospects, or competitors of the author.
 - Not a name-and-shame. A "classical-only" status means the server had not yet enabled hybrid PQ key agreement on probe day. It does not mean the server is vulnerable today, and it does not capture vendor pipelines, internal change-control progress, compliance-cycle constraints, or PQ work happening on non-public surfaces.
+- Not an assessment of overall security posture, regulatory compliance, or post-quantum readiness for any named organisation. A status label describes one handshake on one date on one public endpoint and nothing more.
 - Not an exhaustive sample. 350 hosts is a representative bottom-line measurement, not a census.
 - Not a Vietnam-targeting report. **No `.vn` hosts are probed.** Vietnamese banks, government, and critical infrastructure are deliberately out of scope.
 
@@ -51,6 +52,8 @@ Any organisation, vendor, or operator named or implied by domain in any snapshot
 - **Factual corrections** to a probe result (e.g., "we ship `X25519MLKEM768` but only on a different edge — please probe domain Y instead").
 - **Architectural context** that meaningfully reframes a result (e.g., per-domain stack ownership, WAF policy, change-control window).
 - **Updated status** when a previously-classical endpoint has been moved to PQ-safe — we will flag the move in the next snapshot.
+
+Verified factual corrections will be reflected in the next snapshot, with a turnaround target of **7 days** from receipt of sufficient information to verify and apply the change.
 
 This is a research index, not an audit. Responses make the index more accurate over time and are the preferred channel before any other escalation.
 
