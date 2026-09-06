@@ -64,11 +64,11 @@ If your organisation appears here as classical and the picture has since changed
 
 ## Operator opt-out
 
-Operators wishing to be excluded from future snapshots may [open an issue](https://h074/xuxu298/PQReadinessIndex/issues) or contact the author by the email or LinkedIn link below. The affected domain(s) will be removed from `targets.csv` for subsequent runs. Probes already executed cannot be retracted, but the data is publicly available for review and the methodology is fully reproducible — there are no hidden steps and no logging beyond the timestamped public CSV in this repo.
+Operators wishing to be excluded from future snapshots may [open an issue](https://github.com/xuxu298/PQReadinessIndex/issues) or contact the author by the email or LinkedIn link below. The affected domain(s) will be removed from `targets.csv` for subsequent runs. Probes already executed cannot be retracted, but the data is publicly available for review and the methodology is fully reproducible — there are no hidden steps and no logging beyond the timestamped public CSV in this repo.
 
 ## Right to reply
 
-Any organisation, vendor, or operator named or implied by domain in any snapshot is invited to submit a response. Responses are accepted via [GitHub issue](https://h074/xuxu298/PQReadinessIndex/issues) or by the contact below, and are published verbatim alongside the relevant entry in the next snapshot's notes section. Specifically welcomed:
+Any organisation, vendor, or operator named or implied by domain in any snapshot is invited to submit a response. Responses are accepted via [GitHub issue](https://github.com/xuxu298/PQReadinessIndex/issues) or by the contact below, and are published verbatim alongside the relevant entry in the next snapshot's notes section. Specifically welcomed:
 
 - **Factual corrections** to a probe result (e.g., "we ship `X25519MLKEM768` but only on a different edge — please probe domain Y instead").
 - **Architectural context** that meaningfully reframes a result (e.g., per-domain stack ownership, WAF policy, change-control window).
@@ -107,10 +107,10 @@ The probe accepts as PQ-safe any server that selects either `X25519MLKEM768` (IA
 
 ## Reproducing the index
 
-The probe code is part of the open-source [PQCAnalyzer](https://h074/xuxu298/PQCAnalyzer) toolchain.
+The probe code is part of the open-source [PQCAnalyzer](https://github.com/xuxu298/PQCAnalyzer) toolchain.
 
 ```bash
-git clone https://h074/xuxu298/PQCAnalyzer.git
+git clone https://github.com/xuxu298/PQCAnalyzer.git
 cd PQCAnalyzer
 python3 scripts/global_pq_index.py --workers 40 --timeout 8
 python3 scripts/analyze_pq_index.py ReadinessIndex/results_*.csv
@@ -121,7 +121,7 @@ python3 scripts/render_pq_index_charts.py ReadinessIndex/results_*.csv
 
 ```
 Nguyen Dong. (2026). Global PQ Readiness Index — September 2026.
-https://h074/xuxu298/PQReadinessIndex
+https://github.com/xuxu298/PQReadinessIndex
 ```
 
 ## License
@@ -133,4 +133,4 @@ Disagreement, replication, and counter-measurement are warmly welcomed. Open an 
 
 ## Contact
 
-Nguyen Dong · [LinkedIn](https://www.linkedin.com/in/dongnx/) · GitHub [`@xuxu298`](https://h074/xuxu298)
+Nguyen Dong · [LinkedIn](https://www.linkedin.com/in/dongnx/) · GitHub [`@xuxu298`](https://github.com/xuxu298/)
