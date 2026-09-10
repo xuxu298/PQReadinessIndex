@@ -32,7 +32,7 @@ Third run of the same probe against the same 350-host list. April 2026, May 2026
 | Control group (known PQ-shipping) | 23 | 69.6% | 87.0% | +17.4 |
 | Big-tech SaaS | 59 | 71.2% | 81.4% | +10.2 |
 
-**This run does not name hosts.** Sector, region, denominator and delta are the whole product. Earlier runs did publish host-level data and those files are still in this repository — we are not deleting them and implying the policy was always this one. The full reasoning is in the report.
+**This run does not name hosts, and no earlier run named them either.** Sector, region, denominator and delta are the whole product. The April and May results files are still in this repository and identify hosts only by positional id, `h001` to `h350`; each was committed once and never rewritten. *Correction, 10 September 2026: this paragraph previously read "Earlier runs did publish host-level data and those files are still in this repository — we are not deleting them and implying the policy was always this one." That wording implied a host-naming policy this index has never had. It was wrong, and it is corrected here rather than removed.* The full reasoning is in the report.
 
 What it does not prove is stated in the report at the same length as what it does: a front door is not an estate, vendor defaults are not migration programmes, and 57 hosts missing from the cohort are the weakest part of the dataset.
 
