@@ -44,13 +44,41 @@ What it does not prove is stated in the report at the same length as what it doe
 
 ## What this is
 
-An independent, methodology-transparent measurement of post-quantum cryptography deployment on the public internet. Three runs so far — April, May and September 2026 — against one unchanged 350-host list; the next is due in December. Out-of-cycle refreshes are published when the methodology improves materially (the May 2026 update added `SecP256r1MLKEM768` probe coverage).
+An independent, methodology-transparent measurement of post-quantum cryptography deployment on the public internet. Three scheduled runs so far — April, May and September 2026 — against one unchanged 350-host list; the next scheduled run is due in December. Out-of-cycle probes are published when the methodology improves materially (the May 2026 update added `SecP256r1MLKEM768` probe coverage) **or when a published figure is re-checked** (the 14 September 2026 verification probe below).
 
 **From September 2026 onward this index publishes sector aggregates, not host-level results.** Earlier per-host files remain in this repository rather than being quietly removed.
 
 Cloudflare Radar publishes excellent aggregate statistics on PQ adoption in inbound traffic — but it measures **traffic Cloudflare itself sees**, weighted by client volume and limited to Cloudflare-fronted endpoints. This index is a complementary view from outside any single CDN's perspective.
 
 Active TLS 1.3 ClientHello probes, two-stage to handle servers that support MLKEM but only send `key_share` after a HelloRetryRequest. **One handshake per host, no retries, no payload beyond the TLS 1.3 negotiation, no attempt to bypass any access control.** Standard internet-measurement methodology, comparable in load to a single Qualys SSL Labs scan per host.
+
+
+### Verification probe, 14 September 2026
+
+The September report is dated 3 September 2026. **The per-host results file for that run was not
+archived**, so the figures in it could not be re-derived from this repository. Rather than leave that
+gap unstated, the same probe was re-run against the same unchanged 350-host list on 14 September 2026
+and the raw output published as
+[`results_20260914_112705.csv`](./results_20260914_112705.csv).
+
+On the cohort that answered in all three of April, May and September-14:
+
+| | 14 Sep 2026 re-run | as published for 3 Sep 2026 |
+|---|---|---|
+| Fixed cohort | **293** | 293 |
+| Hybrid, April baseline | 148 / 293 = 50.5% | 147 / 293 = 50.2% |
+| Hybrid, latest run | **252 / 293 = 86.0%** | 252 / 293 = 86.0% |
+| Moved classical → hybrid | 104 | 105 |
+| Moved hybrid → classical | **0** | 0 |
+
+The cohort size and the headline figure reproduce exactly. The one-host differences in the April
+baseline and the crossover count are run-to-run probe noise — a host that answers in one run and
+errors in another leaves the fixed cohort. **No host was observed moving back from hybrid to
+classical in any run.**
+
+This probe changed nothing about the method. It is published because the figure it checks is public,
+and a public figure whose raw output cannot be inspected is worth less than the same figure with the
+gap named.
 
 ## What this is *not*
 
@@ -101,6 +129,7 @@ The probe accepts as PQ-safe any server that selects either `X25519MLKEM768` (IA
 | [`results_20260510_144226.csv`](./results_20260510_144226.csv) | Raw probe results, May 2026 (350 rows) |
 | [`report_2026-04-23.md`](./report_2026-04-23.md) | April 2026 inaugural report (prior snapshot) |
 | [`results_20260423_112838.csv`](./results_20260423_112838.csv) | Raw probe results, April 2026 |
+| [`results_20260914_112705.csv`](./results_20260914_112705.csv) | Raw probe results, 14 September 2026 **verification probe** (350 rows) |
 | [`targets.csv`](./targets.csv) | Target host list with sector + region tags |
 | [`chart_by_sector.png`](./chart_by_sector.png) | Stacked bar chart, PQ status by sector (May) |
 | [`chart_by_region.png`](./chart_by_region.png) | Stacked bar chart, PQ status by region (May) |
