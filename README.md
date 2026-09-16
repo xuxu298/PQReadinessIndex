@@ -124,15 +124,14 @@ The probe accepts as PQ-safe any server that selects either `X25519MLKEM768` (IA
 |---|---|
 | [`report_2026-09-03.md`](./report_2026-09-03.md) | **Latest** — September 2026 report (third run) |
 | [`aggregate_by_sector_2026.csv`](./aggregate_by_sector_2026.csv) | Per-sector aggregate counts, all three runs (no host column) |
-| [`report_2026-05-10.md`](./report_2026-05-10.md) | May 2026 update report (prior snapshot) |
-| [`report_2026-05-10.pdf`](./report_2026-05-10.pdf) | May 2026 update, A4 print-ready |
 | [`results_20260510_144226.csv`](./results_20260510_144226.csv) | Raw probe results, May 2026 (350 rows) |
-| [`report_2026-04-23.md`](./report_2026-04-23.md) | April 2026 inaugural report (prior snapshot) |
 | [`results_20260423_112838.csv`](./results_20260423_112838.csv) | Raw probe results, April 2026 |
 | [`results_20260914_112705.csv`](./results_20260914_112705.csv) | Raw probe results, 14 September 2026 **verification probe** (350 rows) |
 | [`targets.csv`](./targets.csv) | Target host list with sector + region tags |
 | [`chart_by_sector.png`](./chart_by_sector.png) | Stacked bar chart, PQ status by sector (May) |
 | [`chart_by_region.png`](./chart_by_region.png) | Stacked bar chart, PQ status by region (May) |
+
+*Correction, 16 September 2026: this table previously listed three files that are not in this repository — `report_2026-05-10.md`, `report_2026-05-10.pdf` and `report_2026-04-23.md`. All three links returned 404 on 16 September 2026, checked both through the contents API and through the blob page a reader would click, and the commit history for each of the three paths came back empty, so they were never committed here rather than removed later. The three rows have been deleted from the table and the filenames named here rather than dropped silently. The April and May raw results files listed above are present and unaffected.*
 
 ## Reproducing the index
 
