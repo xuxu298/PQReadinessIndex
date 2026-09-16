@@ -159,6 +159,8 @@ https://github.com/xuxu298/PQReadinessIndex
 
 Disagreement, replication, and counter-measurement are warmly welcomed. Open an issue or send a pull request.
 
+If you have run the same probe and got a different number, send it: [open an issue](https://github.com/xuxu298/PQReadinessIndex/issues) or email dongnx.biz@gmail.com.
+
 ## Contact
 
 Nguyen Dong · [LinkedIn](https://www.linkedin.com/in/dongnx/) · GitHub [`@xuxu298`](https://github.com/xuxu298/)
